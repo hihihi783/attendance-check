@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>출석 체크</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #f5f5f5; }
+    h1 { color: #333; }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background: #4CAF50; color: white;
+      border: none; border-radius: 8px;
+    }
+    #status { margin-top: 20px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <h1>출석 체크</h1>
+  <p id="status">버튼을 눌러 출석을 체크하세요.</p>
+  <button onclick="checkIn()">출석!</button>
+
+  <script>
+    function checkIn() {
+      const now = new Date();
+      document.getElementById("status").innerText =
+        `출석 완료! (${now.toLocaleString()})`;
+    }
+  </script>
+</body>
+</html>
